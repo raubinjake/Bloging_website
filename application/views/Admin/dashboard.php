@@ -39,11 +39,11 @@ $msg_class=$this->session->flashdata('msg_class')
 </tr>
 </thead>
 <tbody>
-<?php if(count($articles)): ?> 
+<?php if(count($articles)): $counter = 0; ?> 
 <?php foreach ($articles as $art): ?>
 <tr>
 	   
-		<td><?=  $art->id; ?></td>
+		<td><?=  ++$counter; ?></td>
 		<td><?=  $art->article_title; ?></td>
 		<td><?=  $art->article_body; ?></td>
 		<td><?=  anchor("admin/edituser/{$art->id}",'Edit',['class'=>'btn btn-default']);  ?></td>

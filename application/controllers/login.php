@@ -17,7 +17,7 @@ $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div
   if($this->form_validation->run())
   {
    $uname=$this->input->post('uname');
-   $pass=$this->input->post('pass');
+   $pass=sha1($this->input->post('pass'));
    $this->load->model('loginmodel');
    $login_id=$this->loginmodel->isvalidate($uname,$pass);
    if($login_id)
@@ -50,7 +50,14 @@ public function sendemail()
 $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div>');
   if($this->form_validation->run())
   {
-        $post=$this->input->post(); 
+        $password=sha1($this->input->post('password'));
+         $post=$this->input->post();
+        $post['password']=$password;
+        
+
+        //echo "<pre>";
+        //print_r($post) ;
+        //exit;
       $this->load->model('loginmodel','user');
       if($this->user->add_user($post))
       {

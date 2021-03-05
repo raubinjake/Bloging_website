@@ -44,7 +44,8 @@ class admin extends MY_controller
 
   if($this->form_validation->run('add_article_rules'))
   {
-      $post=$this->input->post(); 
+      $post=$this->input->post();
+      
       $this->load->model('loginmodel','useradd');
       if($this->useradd->add_articles($post))
       {

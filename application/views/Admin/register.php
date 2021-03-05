@@ -1,7 +1,7 @@
 <?php include('header.php'); ?>
 
 <div class="container" style="margin-top:20px;">
-<h1>Register Form</h1>
+<!--<h1>Register Form</h1>
 
 <?php  if($user=$this->session->flashdata('user')): 
 
@@ -16,7 +16,7 @@ $user_class=$this->session->flashdata('user_class')
 </div>
 </div>
 
-<?php endif; ?>
+<?php endif; ?>  -->
 
 
  <?php echo form_open('login/sendemail'); ?>

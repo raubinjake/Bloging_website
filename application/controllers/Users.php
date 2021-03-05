@@ -23,7 +23,7 @@ $this->form_validation->set_error_delimiters('<div class="text-danger">', '</div
     $this->load->library('email');
   
     $this->email->from(set_value('email'),set_value('fname'));
-    $this->email->to("ajay.suneja1993@gmail.com");
+    $this->email->to("mohangulati8@gmail.com");
     $this->email->subject("Registratiion Greeting..");
 
     $this->email->message("Thank  You for Registratiion");
